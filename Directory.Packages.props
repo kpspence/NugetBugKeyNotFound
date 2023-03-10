@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="System.Runtime.InteropServices" Version="4.3.0" /> 
+    <PackageVersion Include="App.Metrics.AspNetCore" Version="4.3.0" />
+	<PackageVersion Include="App.Metrics.AspNetCore.Health.Hosting" Version="3.2.0" />
+	<PackageVersion Include="Serilog.AspNetCore" Version="6.1.0" />
+	
+	<PackageVersion Include="System.Net.Http" Version="4.3.4" /> 
+		
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
+
+  </ItemGroup>
+  <ItemGroup Condition="($(DesignTimeBuild) == true) AND (($(TargetFrameworkIdentifier) == 'WindowsPhoneApp') Or ($(TargetFrameworkIdentifier) == '.NETCore') Or ($(TargetFrameworkProfile) == 'Profile7') Or ($(TargetFrameworkProfile) == 'Profile78') Or ($(TargetFrameworkProfile) == 'Profile259') Or ($(TargetFrameworkProfile) == 'Profile111') Or ($(TargetFrameworkProfile) == 'Profile49') Or ($(TargetFrameworkProfile) == 'Profile44') Or ($(TargetFrameworkProfile) == 'Profile151') Or ($(TargetFrameworkProfile) == 'Profile31') Or ($(TargetFrameworkProfile) == 'Profile157') Or ($(TargetFrameworkProfile) == 'Profile32') Or ($(TargetFrameworkProfile) == 'Profile84') Or ($(TargetFrameworkIdentifier) == 'WindowsPhone' And ($(TargetFrameworkVersion) == 'v8.0' Or $(TargetFrameworkVersion) == 'v8.1')))">
+    <PackageVersion Include="Microsoft.Bcl.Build" Version="build;buildMultitargeting;buildTransitive" />
+  </ItemGroup>
+</Project>

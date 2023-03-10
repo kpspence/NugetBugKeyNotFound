@@ -286,3 +286,4 @@ SPC/Properties/version.txt
 /dmaic-sf/Server/Pages/badgelogin.cshtml
 /Source/src/client/DataLoadFromFile/Setup/PublishedRelease
 /BuildRootCertificates
+*.cmd
